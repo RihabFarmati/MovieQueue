@@ -5,26 +5,27 @@ import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Update
+import io.reactivex.rxjava3.core.Completable
 
 
 @Dao
 interface BaseDao<T> {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insert(entity: T): Long
+    fun insert(entity: T): Completable
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insert(entities: List<T>?): List<Long?>?
+    fun insert(entities: List<T>?): Completable
 
     @Update
-    fun update(entity: T): Int
+    fun update(entity: T): Completable
 
     @Update
-    fun update(entities: List<T>?): Int
+    fun update(entities: List<T>?): Completable
 
     @Delete
-    fun delete(entity: T): Int
+    fun delete(entity: T): Completable
 
     @Delete
-    fun delete(entities: List<T>?): Int
+    fun delete(entities: List<T>?): Completable
 }
