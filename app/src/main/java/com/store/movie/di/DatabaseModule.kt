@@ -1,7 +1,7 @@
-package com.store.movie.share.di
+package com.store.movie.di
 
+import android.app.Application
 import android.content.Context
-import androidx.room.Room
 import com.store.movie.data.local.MovieDatabase
 import com.store.movie.share.dao.CategoryDao
 import com.store.movie.share.dao.MovieDao
@@ -17,14 +17,12 @@ object DatabaseModule {
 
     @Provides
     @Singleton
-    fun provideDatabase(appContext: Context): MovieDatabase {
-        // Create the Room database instance
-        return Room.databaseBuilder(
-            appContext,
-            MovieDatabase::class.java,
-            "movie_database"
-        ).fallbackToDestructiveMigration()
-            .build()
+    fun provideApplicationContext(app: Application): Context = app
+
+    @Provides
+    @Singleton
+    fun provideMovieDatabase(appContext: Context): MovieDatabase {
+        return MovieDatabase.getDatabase(appContext)
     }
 
     @Provides
