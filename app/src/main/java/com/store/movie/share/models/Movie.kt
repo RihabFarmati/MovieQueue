@@ -14,7 +14,7 @@ class Movie(
     var categoryId: Long,
 
     @ColumnInfo(name = "note")
-    var note: String,
+    var note: String?,
 
     @ColumnInfo(name = "user_rate")
     var userRate: Int?,
@@ -27,4 +27,13 @@ class Movie(
 ) {
     @PrimaryKey(autoGenerate = true)
     var id: Int = 0
+
+    constructor(name: String, categoryId: Long) : this(
+        name,
+        categoryId,
+        null,
+        null,
+        false,
+        null
+    )
 }
