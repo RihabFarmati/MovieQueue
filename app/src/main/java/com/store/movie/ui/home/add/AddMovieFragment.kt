@@ -42,7 +42,7 @@ class AddMovieFragment : Fragment() {
     private fun generateMovie(): Movie {
         val movieName = binding.movieName.text.toString()
         val note = binding.note.text.toString()
-        val userRate = binding.userRate.text.toString().toInt()
+        val userRate = binding.ratingBar.rating
 
         // TODO get the selected category one it's implemented
         val categoryId = 1L

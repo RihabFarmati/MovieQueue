@@ -18,7 +18,7 @@
     <fragment
         android:id="@+id/add_movie_button"
         android:name="com.store.movie.ui.home.add.AddMovieFragment"
-        android:label="AddMovieFragment"
+        android:label="@string/add_movie_fragment"
         tools:layout="@layout/fragment_add_movie" />
 
 
