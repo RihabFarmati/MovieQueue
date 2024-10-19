@@ -15,17 +15,17 @@ interface BaseDao<T> {
     fun insert(entity: T): Completable
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insert(entities: List<T>?): Completable
+    fun insert(entities: List<T>): Completable
 
     @Update
     fun update(entity: T): Completable
 
     @Update
-    fun update(entities: List<T>?): Completable
+    fun update(entities: List<T>): Completable
 
     @Delete
     fun delete(entity: T): Completable
 
     @Delete
-    fun delete(entities: List<T>?): Completable
+    fun delete(entities: List<T>): Completable
 }
