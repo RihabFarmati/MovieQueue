@@ -11,4 +11,11 @@
     <string name="menu_category">Category</string>
 
     <string name="action_add_movie">Add movie</string>
+    <string name="add_movie_category">Category</string>
+    <string name="add_movie_movie_name">Movie name</string>
+    <string name="add_movie_user_rate">User Rate</string>
+    <string name="add_movie_note">Note</string>
+    <string name="movie_added_successfully">Movie added successfully</string>
+    <string name="error_try_again">Error try again</string>
+
 </resources>

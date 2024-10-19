@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
     <style name="Theme.mMovieQueue" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
@@ -22,4 +22,22 @@
     <style name="Theme.mMovieQueue.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.mMovieQueue.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppEditTextStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:layout_margin">16dp</item>
+        <item name="android:backgroundTint">@color/secondary_color</item>
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:textColorHint">@color/accent_color</item>
+    </style>
+
+    <style name="AppEditTextNoteStyle" parent="AppEditTextStyle">
+        <item name="android:inputType">textMultiLine</item>
+        <item name="android:minHeight">150dp</item>
+        <item name="android:maxLines">5</item>
+        <item name="android:gravity">top</item>
+    </style>
+
 </resources>

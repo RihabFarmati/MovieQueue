@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import com.store.movie.R
 import com.store.movie.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -20,6 +22,14 @@ class HomeFragment : Fragment() {
     ): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.addMovieButton.setOnClickListener {
+            findNavController().navigate(R.id.action_nav_home_to_add_movie_button)
+        }
     }
 
     override fun onDestroyView() {

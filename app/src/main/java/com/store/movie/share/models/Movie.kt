@@ -28,11 +28,11 @@ class Movie(
     @PrimaryKey(autoGenerate = true)
     var id: Int = 0
 
-    constructor(name: String, categoryId: Long) : this(
+    constructor(name: String, note: String, userRate: Int, categoryId: Long) : this(
         name,
         categoryId,
-        null,
-        null,
+        note,
+        userRate,
         false,
         null
     )
