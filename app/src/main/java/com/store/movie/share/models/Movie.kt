@@ -17,7 +17,7 @@ class Movie(
     var note: String?,
 
     @ColumnInfo(name = "user_rate")
-    var userRate: Int?,
+    var userRate: Float?,
 
     @ColumnInfo(name = "is_watched")
     var isWatched: Boolean = false,
@@ -26,9 +26,9 @@ class Movie(
     var imagePath: String?
 ) {
     @PrimaryKey(autoGenerate = true)
-    var id: Int = 0
+    var id: Long = 0
 
-    constructor(name: String, note: String, userRate: Int, categoryId: Long) : this(
+    constructor(name: String, note: String, userRate: Float, categoryId: Long) : this(
         name,
         categoryId,
         note,
